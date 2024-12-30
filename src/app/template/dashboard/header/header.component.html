@@ -1,0 +1,19 @@
+<nav>
+  <div class="nav-wrapper grey lighten-5">
+    <div class="container">
+      <a routerLink="/dashboard/home" class="brand-logo"><img src="assets/img/logo.png"></a>
+      <a href="#" data-target="mobile-menu" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-desktop" class="right hide-on-med-and-down">
+        <li><a routerLink="/dashboard/home">Home</a></li>
+        <li><a routerLink="/dashboard/campanhas">Campanhas</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<ul class="sidenav" id="mobile-menu">
+  <li><a routerLink="/dashboard/home" class="sidenav-close">Home</a></li>
+  <li><a routerLink="/dashboard/campanhas" class="sidenav-close">Campanhas</a></li>
+  <li class="divider"></li>
+  <li><a class="sidenav-close"><i class="material-icons">close</i></a></li>
+</ul>

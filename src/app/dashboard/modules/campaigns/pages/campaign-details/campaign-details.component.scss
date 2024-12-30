@@ -1,0 +1,38 @@
+  /* Garante que todos os cards tenham a mesma altura */
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px; /* Define altura suficiente para texto e número */
+}
+
+/* Configura flexbox no conteúdo para alinhar elementos uniformemente */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; /* Espaçamento uniforme entre elementos */
+    height: 100%; /* Preenche o card */
+}
+
+/* Define estilo consistente para o título */
+.card-title {
+    font-size: 1rem; /* Ajusta tamanho do texto */
+    margin: 0;
+    text-align: center;
+    padding: 0 5px; /* Espaçamento interno para evitar corte */
+    word-wrap: break-word; /* Permite quebra de linha */
+    line-height: 1.2; /* Controla altura entre linhas */
+    font-weight: 400; /* Negrito */
+}
+
+/* Define estilo consistente para o valor */
+.card-value {
+    margin: 0;
+    line-height: 1;
+    font-weight: lighter; 
+}
+
+form {
+    margin-top: 20px;
+}

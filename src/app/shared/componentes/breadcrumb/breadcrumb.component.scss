@@ -1,0 +1,14 @@
+.breadcrumb {
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.disabled {
+    pointer-events: none;
+    color: grey !important;
+}
+
+.breadcrumb::before {
+    color: #000 !important;
+}

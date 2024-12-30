@@ -1,0 +1,20 @@
+<div class="card">
+    <p-table [value]="dados" [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+        currentPageReportTemplate="Monstrando {last} registros de um total de {totalRecords}"
+        [rowsPerPageOptions]="[10, 20, 30]" styleClass="p-datatable-gridlines" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th *ngFor="let coluna of colunas">{{ coluna.nome }}</th>
+                <th>Ações</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-data>
+            <tr>
+                <td *ngFor="let coluna of colunas">{{data[coluna.chave]}}</td>
+                <td>
+                    <a title="Visualizar Registro" (click)="onView()" class="btn-floating btn-small waves-effect waves-light green mr-1"><i class="material-icons">pageview</i></a>
+                </td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

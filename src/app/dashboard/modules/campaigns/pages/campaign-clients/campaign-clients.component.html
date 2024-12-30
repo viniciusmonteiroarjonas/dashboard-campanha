@@ -1,0 +1,40 @@
+<section class="container">
+    <div class="row">
+        <app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
+    </div>
+    <form class="col s12">
+        <div class="row">
+            <div class="col l12">
+                <div class="input-field col s6 m4 l4">
+                    <input id="start_date" type="date" class="datepicker" required>
+                    <label for="start_date">Data Inicial</label>
+                </div>
+                <div class="input-field col s6 m4 l4">
+                    <input id="end_date" type="date" class="datepicker" required>
+                    <label for="end_date">Data Final</label>
+                </div>
+                <div class="input-field col s12 m4 l4">
+                    <input id="icon_prefix" type="text" class="validate">
+                    <label for="icon_prefix">Pesquisar...</label>
+                </div>
+                <div class="input-field">
+                    <button class="btn blue darken-1 col l2 m4 s12" type="submit" name="action">Buscar
+                        <i class="material-icons right">search</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <h2 class="center-align">Listagem de clientes inscritos na campanha</h2>
+        <div class="right-align">
+            <button class="btn btn-small waves-effect waves-light orange" type="submit" name="action">Gerar CVS
+                <i class="material-icons right">download</i>
+            </button>
+        </div>
+        <app-table [colunas]="colunas" [dados]="dados" (viewAction)="handleView(dados)"
+            (downloadAction)="handleDownload(dados)">
+            >
+        </app-table>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.sidenav-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.sidenav {
+  width: 390px;
+}
+
+.mat-mdc-list-base {
+  display: inline;
+}
+
+
+nav ul a {
+  color: #000000;
+}
+
+nav .sidenav-trigger i {
+  color: #000000;
+}

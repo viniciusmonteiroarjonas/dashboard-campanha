@@ -1,0 +1,20 @@
+<section class="container">
+    <div class="row">
+        <app-breadcrumb [breadcrumbs]="breadcrumbs"></app-breadcrumb>
+    </div>
+    <div class="row">
+        <div *ngFor="let campaign of campaigns" class="col s12 m6">
+            <div class="card hoverable">
+                <div class="card-content">
+                    <h2 class="center-align">{{ campaign.name }}</h2>
+                    <p class="center-align">{{ campaign.description }}</p>
+                </div>
+                <div class="card-action center-align">
+                    <a [routerLink]="['/dashboard/campanhas/dados', campaign.campaignId, campaign.subCampaignId]" class="btn blue darken-1">Dashboard</a>
+                    <a [routerLink]="['/dashboard/campanhas/detalhes', campaign.campaignId, campaign.subCampaignId]" class="btn blue darken-1 ">Números</a>
+                    <a [routerLink]="['/dashboard/campanhas/clientes', campaign.campaignId, campaign.subCampaignId]" class="btn blue darken-1 ">Clientes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
